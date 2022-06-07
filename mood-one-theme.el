@@ -378,6 +378,13 @@
    ;; company-box
    `(company-box-candidate ((,class (:foreground ,fg))))
 
+   ;; corfu
+   `(corfu-default ((,class (:background ,base-3 :foreground ,fg))))
+   `(corfu-current ((,class (:background ,base-4))))
+   `(corfu-bar ((,class (:background ,base-4))))
+   `(corfu-border ((,class (:background ,base-3))))
+   `(corfu-echo ((,class (:inherit 'font-lock-doc-face))))
+
    ;; diff-hl
    `(diff-hl-change ((,class (:foreground ,orange))))
    `(diff-hl-delete ((,class (:foreground ,red))))
