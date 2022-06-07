@@ -178,6 +178,10 @@
    `(compilation-mode-line-exit ((,class (:inherit 'compilation-info))))
    `(compilation-mode-line-fail ((,class (:inherit 'compilation-error))))
 
+   ;; completions
+   `(completions-annotations ((,class (:inherit 'shadow))))
+   `(completions-common-part ((,class (:foreground ,violet))))
+
    ;; custom
    `(custom-button ((,class (:background ,base-2 :foreground ,blue :box (:line-width 1 :color ,base-0)))))
    `(custom-button-unraised ((,class (:background ,bg :foreground ,violet :box (:line-width 1)))))
