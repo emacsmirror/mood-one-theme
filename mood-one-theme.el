@@ -494,9 +494,9 @@
    `(linum-relative-current-face ((,class (:inherit 'line-number-current-line))))
 
    ;; lsp
-   `(lsp-face-highlight-textual ((,class (:background ,dark-blue :foreground ,base-8 :distant-foreground ,base-0 :weight bold))))
-   `(lsp-face-highlight-read ((,class (:background ,dark-blue :foreground ,base-8 :distant-foreground ,base-0 :weight bold))))
-   `(lsp-face-highlight-write ((,class (:background ,dark-blue :foreground ,base-8 :distant-foreground ,base-0 :weight bold))))
+   `(lsp-face-highlight-textual ((,class (:background ,base-4 :distant-foreground ,base-0))))
+   `(lsp-face-highlight-read ((,class (:background ,base-4 :distant-foreground ,base-0))))
+   `(lsp-face-highlight-write ((,class (:background ,base-4 :distant-foreground ,base-0))))
 
    ;; lsp-ui-doc
    `(lsp-ui-doc-background ((,class (:background ,base-3))))
