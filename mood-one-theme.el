@@ -76,6 +76,9 @@
 
 (let ((class '((class color) (min-colors 256)))
 
+      ;; Layout/Sizing
+      (mode-line-padding 8)
+
       ;; Base (Background) Colors
       (bg (if (mood-one-theme--true-color-p) "#282c30" "#1c1c1c"))
       (bg-alt (if (mood-one-theme--true-color-p) "#212428" "#121212"))
@@ -153,8 +156,8 @@
    `(font-lock-regexp-grouping-construct ((,class (:inherit 'bold :foreground ,blue))))
 
    ;; mode-line / header-line
-   `(mode-line ((,class (:background ,base-0 :foreground ,fg :box (:line-width 7 :color ,base-0)))))
-   `(mode-line-inactive ((,class (:background ,bg-alt :foreground ,base-5 :box (:line-width 7 :color ,bg-alt)))))
+   `(mode-line ((,class (:background ,base-0 :foreground ,fg :box (:line-width ,mode-line-padding :color ,base-0)))))
+   `(mode-line-inactive ((,class (:background ,bg-alt :foreground ,base-5 :box (:line-width ,mode-line-padding :color ,bg-alt)))))
    `(mode-line-emphasis ((,class (:foreground ,blue))))
    `(mode-line-highlight ((,class (:inherit 'highlight))))
    `(mode-line-buffer-id ((,class (:foreground ,violet :weight bold))))
