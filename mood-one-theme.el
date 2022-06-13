@@ -159,9 +159,9 @@
    `(mode-line ((,class (:background ,base-0 :foreground ,fg :box (:line-width ,mode-line-padding :color ,base-0)))))
    `(mode-line-inactive ((,class (:background ,bg-alt :foreground ,base-5 :box (:line-width ,mode-line-padding :color ,bg-alt)))))
    `(mode-line-emphasis ((,class (:foreground ,blue))))
-   `(mode-line-highlight ((,class (:inherit 'highlight))))
+   `(mode-line-highlight ((,class (:foreground ,fg))))
    `(mode-line-buffer-id ((,class (:foreground ,violet :weight bold))))
-   `(header-line ((,class (:inherit 'mode-line))))
+   `(header-line ((,class (:inherit 'mode-line-inactive))))
 
    ;; ===============================
    ;; -- built-in packages/plugins --
