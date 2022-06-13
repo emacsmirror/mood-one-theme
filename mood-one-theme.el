@@ -530,7 +530,7 @@
    `(magit-blame-date ((,class (:foreground ,red))))
    `(magit-blame-heading ((,class (:background ,base-3 :foreground ,orange))))
    `(magit-branch-current ((,class (:foreground ,blue))))
-   `(magit-branch-local ((,class (:foreground ,cyan))))
+   `(magit-branch-local ((,class (:foreground ,yellow))))
    `(magit-branch-remote ((,class (:foreground ,green))))
    `(magit-cherry-equivalent ((,class (:foreground ,violet))))
    `(magit-cherry-unmatched ((,class (:foreground ,cyan))))
