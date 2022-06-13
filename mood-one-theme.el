@@ -186,12 +186,12 @@
    `(completions-common-part ((,class (:foreground ,violet))))
 
    ;; custom
-   `(custom-button ((,class (:background ,base-2 :foreground ,blue :box (:line-width 1 :color ,base-0)))))
-   `(custom-button-unraised ((,class (:background ,bg :foreground ,violet :box (:line-width 1)))))
-   `(custom-button-pressed-unraised ((,class (:background ,violet :foreground ,fg :box (:line-width 1)))))
-   `(custom-button-pressed ((,class (:background ,blue :foreground ,bg :box (:line-width 1 :color ,base-5)))))
-   `(custom-button-mouse ((,class (:background ,blue :foreground ,bg :box (:line-width 1 :color ,base-5)))))
-   `(custom-variable-button ((,class (:foreground ,green :underline t))))
+   `(custom-button ((,class (:background ,base-3 :foreground ,fg :box (:line-width 3 :color ,base-3)))))
+   `(custom-button-pressed ((,class (:background ,base-4 :foreground ,fg :box (:line-width 3 :color ,base-4)))))
+   `(custom-button-unraised ((,class (:inherit 'custom-button))))
+   `(custom-button-pressed-unraised ((,class (:inherit 'custom-button-pressed))))
+   `(custom-button-mouse ((,class (:inherit 'custom-button-pressed))))
+   `(custom-variable-button ((,class (:inherit 'link :foreground ,green))))
    `(custom-saved ((,class (:foreground ,green :bold bold))))
    `(custom-comment ((,class (:foreground ,fg :background ,dark-blue))))
    `(custom-comment-tag ((,class (:foreground ,gray))))
@@ -275,6 +275,9 @@
    ;; gdb
    `(breakpoint-enabled ((, class (:foreground ,red))))
    `(breakpoint-disabled ((, class (:foreground ,base-5))))
+
+   ;; help
+   `(help-key-binding ((,class (:foreground ,pink))))
 
    ;; hl-line
    `(hl-line ((,class (:background ,bg-alt :extend t))))
