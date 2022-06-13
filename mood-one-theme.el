@@ -318,6 +318,9 @@
    `(message-mml ((,class (:foreground ,base-5 :slant italic))))
    `(message-cited-text ((,class (:foreground ,magenta))))
 
+   ;; pulse
+   `(pulse-highlight-start-face ((,class (:background ,base-5 :extend t))))
+
    ;; show-paren
    `(show-paren-match ((,class (:background ,base-0 :foreground ,red :weight ultra-bold))))
    `(show-paren-mismatch ((,class (:background ,red :foreground ,base-0 :weight ultra-bold))))
