@@ -273,8 +273,8 @@
    `(eshell-ls-unreadable ((,class (:foreground ,base-5))))
 
    ;; gdb
-   `(breakpoint-enabled ((, class (:foreground ,red))))
-   `(breakpoint-disabled ((, class (:foreground ,base-5))))
+   `(breakpoint-enabled ((,class (:foreground ,red))))
+   `(breakpoint-disabled ((,class (:foreground ,base-5))))
 
    ;; help
    `(help-key-binding ((,class (:foreground ,pink))))
