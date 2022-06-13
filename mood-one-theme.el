@@ -323,12 +323,11 @@
    `(show-paren-mismatch ((,class (:background ,red :foreground ,base-0 :weight ultra-bold))))
 
    ;; tab-line/tab-bar
-   `(tab-line ((,class (:background ,bg-alt :foreground ,bg-alt))))
-   `(tab-line-tab ((,class (:background ,bg :foreground ,fg))))
-   `(tab-line-tab-inactive ((,class (:background ,bg-alt :foreground ,fg-alt))))
-   `(tab-line-tab-current ((,class (:background ,bg :foreground ,fg))))
+   `(tab-line ((,class (:background ,bg-alt))))
+   `(tab-line-tab ((,class (:background ,bg :foreground ,fg :box (:line-width ,mode-line-padding :color ,bg)))))
+   `(tab-line-tab-inactive ((,class (:background ,bg-alt :foreground ,fg-alt :box (:line-width ,mode-line-padding :color ,bg-alt)))))
+   `(tab-line-tab-current ((,class (:inherit 'tab-line-tab))))
    `(tab-line-highlight ((,class (:inherit 'tab-line-tab))))
-   `(tab-line-close-highlight ((,class (:foreground ,base-0))))
    `(tab-bar ((,class (:inherit 'tab-line))))
    `(tab-bar-tab ((,class (:inherit 'tab-line-tab))))
    `(tab-bar-tab-inactive ((,class (:inherit 'tab-line-tab-inactive))))
