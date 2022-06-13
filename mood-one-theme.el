@@ -673,6 +673,9 @@
    `(undo-tree-visualizer-active-branch-face ((,class (:foreground ,blue))))
    `(undo-tree-visualizer-register-face ((,class (:foreground ,yellow))))
 
+   ;; vertico
+   `(vertico-current ((,class (:background ,base-4 :extend t))))
+
    ;; which-func
    `(which-func ((,class (:foreground ,blue))))
 
