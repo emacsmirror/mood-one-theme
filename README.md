@@ -12,6 +12,8 @@
 
 * Beautiful dark color scheme inspired by the Doom One theme
 
+* Automatic 256-color mode support
+
 * Custom fringe bitmaps for diff-hl, flycheck, and flymake
 
 * Lightweight with no dependencies

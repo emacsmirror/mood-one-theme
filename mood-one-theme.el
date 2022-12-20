@@ -15,6 +15,7 @@
 ;;
 ;; Features offered:
 ;; * Beautiful dark color scheme inspired by the Doom One theme
+;; * Automatic 256-color mode support
 ;; * Custom fringe bitmaps for line continuations, visual-line-mode, diff-hl, flycheck, and flymake
 ;; * Custom configuration for neotree
 ;; * Lightweight with no dependencies
@@ -67,6 +68,7 @@
 (defun mood-one-theme--true-color-p ()
   "Return 't' if the frame is capable of displaying true colors."
   (or
+   (daemonp)
    (display-graphic-p)
    (>= (tty-display-color-cells) 16777216)))
 
