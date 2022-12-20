@@ -29,7 +29,7 @@
 
 ### Custom Fringe Bitmaps
 
-To replace default line continuation/line wrap fringe bitmaps:
+To replace default line continuation/line wrap fringe bitmaps:\
 `(mood-one-theme-arrow-fringe-bmp-enable)`
 
 To enable custom fringe bitmaps for [diff-hl](https://github.com/dgutov/diff-hl):\
