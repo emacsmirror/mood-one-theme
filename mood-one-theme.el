@@ -768,11 +768,10 @@
 ;;;###autoload
 (defun mood-one-theme-neotree-configuration-enable ()
   "Enable custom mood-one configuration for use with neotree."
-  (progn
-    (advice-add #'neo-global--select-window :after (lambda () (visual-line-mode 0) (set-window-fringes neo-global--window 0 0)))
-    (advice-add #'neo-buffer--insert-root-entry :override #'mood-one-theme-neotree-insert-root)
-    (advice-add #'neo-buffer--insert-dir-entry :override #'mood-one-theme-neotree-insert-dir)
-    (advice-add #'neo-buffer--insert-file-entry :override #'mood-one-theme-neotree-insert-file)))
+  (advice-add #'neo-global--select-window :after (lambda () (visual-line-mode 0) (set-window-fringes neo-global--window 0 0)))
+  (advice-add #'neo-buffer--insert-root-entry :override #'mood-one-theme-neotree-insert-root)
+  (advice-add #'neo-buffer--insert-dir-entry :override #'mood-one-theme-neotree-insert-dir)
+  (advice-add #'neo-buffer--insert-file-entry :override #'mood-one-theme-neotree-insert-file))
 
 ;;
 ;; Fringe bitmap functions
@@ -857,10 +856,9 @@
 ;;;###autoload
 (defun mood-one-theme-flymake-fringe-bmp-enable ()
   "Enable custom mood-one fringe bitmaps for use with flymake."
-  (progn
-    (setq-default flymake-error-bitmap '(mood-one-theme--marker-bmp compilation-error))
-    (setq-default flymake-warning-bitmap '(mood-one-theme--marker-bmp compilation-warning))
-    (setq-default flymake-note-bitmap '(mood-one-theme--marker-bmp compilation-info))))
+  (setq-default flymake-error-bitmap '(mood-one-theme--marker-bmp compilation-error))
+  (setq-default flymake-warning-bitmap '(mood-one-theme--marker-bmp compilation-warning))
+  (setq-default flymake-note-bitmap '(mood-one-theme--marker-bmp compilation-info)))
 
 ;;
 ;; Register theme folder location
