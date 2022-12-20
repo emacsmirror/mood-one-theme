@@ -169,6 +169,16 @@
    ;; -- built-in packages/plugins --
    ;; ===============================
 
+   ;; ansi-colors
+   `(ansi-color-black ((,class (:background ,base-0 :foreground ,base-0))))
+   `(ansi-color-red ((,class (:background ,red :foreground ,red))))
+   `(ansi-color-green ((,class (:background ,green :foreground ,green))))
+   `(ansi-color-yellow ((,class (:background ,yellow :foreground ,yellow))))
+   `(ansi-color-blue ((,class (:background ,blue :foreground ,blue))))
+   `(ansi-color-magenta ((,class (:background ,magenta :foreground ,magenta))))
+   `(ansi-color-cyan ((,class (:background ,cyan :foreground ,cyan))))
+   `(ansi-color-white ((,class (:background ,base-8 :foreground ,base-8))))
+
    ;; cperl
    `(cperl-array-face ((,class (:inherit 'font-lock-variable-name-face :weight bold))))
    `(cperl-hash-face ((,class (:inherit 'font-lock-variable-name-face :weight bold :slant italic))))
@@ -336,18 +346,6 @@
    `(tab-bar ((,class (:inherit 'tab-line))))
    `(tab-bar-tab ((,class (:inherit 'tab-line-tab))))
    `(tab-bar-tab-inactive ((,class (:inherit 'tab-line-tab-inactive))))
-
-   ;; term
-   `(term ((,class (:foreground ,fg))))
-   `(term-bold ((,class (:weight bold))))
-   `(term-color-black ((,class (:background ,base-0 :foreground ,base-0))))
-   `(term-color-red ((,class (:background ,red :foreground ,red))))
-   `(term-color-green ((,class (:background ,green :foreground ,green))))
-   `(term-color-yellow ((,class (:background ,yellow :foreground ,yellow))))
-   `(term-color-blue ((,class (:background ,blue :foreground ,blue))))
-   `(term-color-magenta ((,class (:background ,magenta :foreground ,magenta))))
-   `(term-color-cyan ((,class (:background ,cyan :foreground ,cyan))))
-   `(term-color-white ((,class (:background ,base-8 :foreground ,base-8))))
 
    ;; window-divider
    `(window-divider ((,class (:inherit 'vertical-border))))
