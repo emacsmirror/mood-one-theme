@@ -330,6 +330,16 @@
    `(message-mml ((,class (:foreground ,base-5 :slant italic))))
    `(message-cited-text ((,class (:foreground ,magenta))))
 
+   ;; outline
+   `(outline-1 ((,class (:foreground ,blue :weight bold))))
+   `(outline-2 ((,class (:foreground ,magenta :weight bold))))
+   `(outline-3 ((,class (:foreground ,violet :weight bold))))
+   `(outline-4 ((,class (:foreground ,blue :weight bold))))
+   `(outline-5 ((,class (:foreground ,magenta :weight bold))))
+   `(outline-6 ((,class (:foreground ,blue :weight bold))))
+   `(outline-7 ((,class (:foreground ,magenta :weight bold))))
+   `(outline-8 ((,class (:foreground ,blue :weight bold))))
+
    ;; pulse
    `(pulse-highlight-start-face ((,class (:background ,base-5 :extend t))))
 
