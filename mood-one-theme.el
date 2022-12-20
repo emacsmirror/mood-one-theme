@@ -1,10 +1,10 @@
-;;; mood-one-theme.el --- A dark color scheme inspired by the Doom One theme. -*- lexical-binding: t; -*-
+;;; mood-one-theme.el --- A dark color scheme inspired by the Doom One theme -*- lexical-binding: t; -*-
 
 ;; Author: Jessie Hildebrandt <jessieh.net>
 ;; Homepage: https://gitlab.com/jessieh/mood-one-theme
 ;; Keywords: mode-line faces
 ;; Version: 1.2.1
-;; Package-Requires: ((emacs "24.4"))
+;; Package-Requires: ((emacs "27.1"))
 
 ;; This file is not part of GNU Emacs.
 
@@ -53,6 +53,28 @@
 ;; Floor, Boston, MA 02110-1301, USA.
 
 ;;; Code:
+
+;;
+;; Ext. variable defs
+;;
+
+(defvar neotree-dir-button-keymap)
+(defvar neotree-file-button-keymap)
+(defvar neo-global--window)
+
+;;
+;; Ext. function decls
+;;
+
+(declare-function flycheck-redefine-standard-error-levels "flycheck" (&optional margin-str fringe-bitmap))
+
+(declare-function neo-path--file-short-name "neotree" (file))
+(declare-function neo-buffer--node-list-set "neotree" (line-num path))
+(declare-function neo-buffer--newline-and-begin "neotree" ())
+(declare-function neo-global--select-window "neotree" ())
+(declare-function neo-buffer--insert-root-entry "neotree" (node))
+(declare-function neo-buffer--insert-dir-entry "neotree" (node depth expanded))
+(declare-function neo-buffer--insert-file-entry "neotree" (node depth))
 
 ;;
 ;; Theme definition
@@ -715,14 +737,17 @@
 ;;
 
 (defun mood-one-theme-neotree-hidden-dir-p (dirname)
+  "Return non-nil if DIRNAME should be considered hidden."
   (string-prefix-p "." dirname))
 
 (defun mood-one-theme-neotree-hidden-file-p (filename)
+  "Return non-nil if FILENAME should be considered hidden."
   (or (string-prefix-p "." filename)
       (and (string-prefix-p "#" filename)
            (string-suffix-p "#" filename))))
 
 (defun mood-one-theme-neotree-insert-root (node)
+  "Insert root directory NODE at point."
   (insert
    (concat
     " "
@@ -734,6 +759,7 @@
      'face '(:inherit (neo-root-dir-face) :height 1.0)))))
 
 (defun mood-one-theme-neotree-insert-dir (node depth expanded)
+  "Insert directory NODE with indentation level DEPTH and state EXPANDED at point."
   (let ((short-name (neo-path--file-short-name node))
         (face '(:inherit (neo-dir-link-face))))
     (when (mood-one-theme-neotree-hidden-dir-p short-name)
@@ -751,6 +777,7 @@
     (neo-buffer--newline-and-begin)))
 
 (defun mood-one-theme-neotree-insert-file (node depth)
+  "Insert file NODE with indentation level DEPTH at point."
   (let ((short-name (neo-path--file-short-name node))
         (face '(:inherit (neo-file-link-face))))
     (when (mood-one-theme-neotree-hidden-file-p short-name)
@@ -814,7 +841,7 @@
 
 ;;;###autoload
 (defun mood-one-theme-arrow-fringe-bmp-enable ()
-  "Enable custom mood-one fringe bitmaps to replace the default line continuation and line wrap arrows."
+  "Replace the default line continuation and line wrap arrows with custom bitmaps."
   (define-fringe-bitmap 'right-arrow mood-one-theme--right-arrow-bmp)
   (define-fringe-bitmap 'left-arrow mood-one-theme--left-arrow-bmp)
   (define-fringe-bitmap 'right-curly-arrow mood-one-theme--down-arrow-bmp)
