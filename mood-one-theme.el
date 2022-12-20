@@ -795,7 +795,14 @@
 ;;;###autoload
 (defun mood-one-theme-neotree-configuration-enable ()
   "Enable custom mood-one configuration for use with neotree."
-  (advice-add #'neo-global--select-window :after (lambda () (visual-line-mode 0) (set-window-fringes neo-global--window 0 0)))
+  (advice-add #'neo-global--select-window :after (lambda ()
+                                                   (setq-local line-spacing 3
+                                                               mode-line-format nil
+                                                               auto-hscroll-mode nil
+                                                               buffer-display-table (make-display-table))
+                                                   (visual-line-mode -1)
+                                                   (set-window-fringes neo-global--window 0 0)
+                                                   (set-display-table-slot buffer-display-table 'truncation 8230)))
   (advice-add #'neo-buffer--insert-root-entry :override #'mood-one-theme-neotree-insert-root)
   (advice-add #'neo-buffer--insert-dir-entry :override #'mood-one-theme-neotree-insert-dir)
   (advice-add #'neo-buffer--insert-file-entry :override #'mood-one-theme-neotree-insert-file))
